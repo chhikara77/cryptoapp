@@ -31,7 +31,7 @@ function CryptoList() {
  }
 
   const getSavedData = async () => {
-    const { data } = await axios.get("/");
+    const { data } = await axios.get("/data");
     const watchdata=data.map((ele)=>{
        return ele.name
     })

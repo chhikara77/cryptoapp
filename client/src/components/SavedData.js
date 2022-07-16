@@ -14,10 +14,11 @@ import { Link } from 'react-router-dom';
 
 
 const SavedData = () => {
-  const [watchlist,setWatchlist] = useState([])
   const [coins,setCoins]=useState([])
+  const [watchlist,setWatchlist] = useState(coins)
   const getSavedData = async () => {
-    const { data } = await axios.get("/");
+    const { data } = await axios.get('/data');
+    console.log("hi",data)
     setWatchlist(data);
   };
   const fetchCoins = async () => {

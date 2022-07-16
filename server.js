@@ -7,13 +7,13 @@ const coins = require("./Model.js")
 
 mongoose.connect('mongodb+srv://sanjay:krishna@testcluster.lvmyd.mongodb.net/appquick?retryWrites=true&w=majority',()=>console.log("connecteted to db"))
 
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "build","client")))
 app.use(express.json())
 app.use(cors({
     origin: 'http://localhost:3000'
 }))
 
-app.get("/",async(req,res)=>{
+app.get("/data",async(req,res)=>{
     console.log("request recevied")
     try {
         const coindata= await coins.find();
@@ -51,6 +51,7 @@ app.delete("/",async(req,res)=>{
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    console.log(req.body,req.params)
 });
 
 const PORT = process.env.PORT || 4000
