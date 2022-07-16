@@ -5,7 +5,7 @@ node_modules
 *.orig
 .idea
 .vscode/node_modules
-
+node_modules/
 /coverage
 
 # production
