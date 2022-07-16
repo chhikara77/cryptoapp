@@ -7,7 +7,7 @@ const coins = require("./Model.js")
 
 mongoose.connect('mongodb+srv://sanjay:krishna@testcluster.lvmyd.mongodb.net/appquick?retryWrites=true&w=majority',()=>console.log("connecteted to db"))
 
-app.use(express.static(path.join(__dirname, "build","client")))
+app.use(express.static(path.join(__dirname, "client","build")))
 app.use(express.json())
 app.use(cors({
     origin: 'http://localhost:3000'
