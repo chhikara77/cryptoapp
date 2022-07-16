@@ -1,0 +1,72 @@
+.view,.home {
+    background-color: #f5f7fe;
+    padding-bottom: 100px;
+}
+.mainContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.header {
+    background-color: #e6e9fe;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.header img {
+    height: 40px;
+}
+.heroCards {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.heroCard {
+    width: 200px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #273162;
+    padding: 10px;
+}
+.heroCard .icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f5f7fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heroCard img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+.price .currency {
+    color: rgb(100, 100, 100);
+    font-size: 11px;
+    position: relative;
+    top: -3px;
+    left: 2px;
+}
+
+/* .app {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+  } */
+  
+  
+  
