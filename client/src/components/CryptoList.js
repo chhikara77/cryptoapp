@@ -31,7 +31,7 @@ function CryptoList() {
  }
 
   const getSavedData = async () => {
-    const { data } = await axios.get("http://localhost:4000");
+    const { data } = await axios.get("/");
     const watchdata=data.map((ele)=>{
        return ele.name
     })
@@ -62,7 +62,7 @@ function CryptoList() {
           "Access-Control-Allow-Origin": "*",
       }
     };
-    axios.post('http://localhost:4000', data, axiosConfig)
+    axios.post('/', data, axiosConfig)
     .then((res) => {
       console.log("RESPONSE RECEIVED: ", res);
       setActiveBtns([...activeBtns,data.name])

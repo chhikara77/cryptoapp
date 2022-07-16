@@ -17,7 +17,7 @@ const SavedData = () => {
   const [watchlist,setWatchlist] = useState([])
   const [coins,setCoins]=useState([])
   const getSavedData = async () => {
-    const { data } = await axios.get("http://localhost:4000");
+    const { data } = await axios.get("/");
     setWatchlist(data);
   };
   const fetchCoins = async () => {
@@ -32,7 +32,7 @@ const SavedData = () => {
           "Access-Control-Allow-Origin": "*",
       }
     };
-    axios.delete("http://localhost:4000",{data:{name},axiosConfig})
+    axios.delete("/",{data:{name},axiosConfig})
     .then((res) => {
       console.log("RESPONSE RECEIVED: ", res.data.acknowledged);
       if(res.data.acknowledged){
